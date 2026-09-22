@@ -13,13 +13,11 @@ export default function Footer({ setActiveTab }) {
               <span className="font-extrabold text-base text-white tracking-tight">CyberPrahari</span>
             </div>
             <p className="text-slate-400 text-xs leading-relaxed">
-              An academic and citizen-centric Cyber Threat Intelligence and Digital Ethics Platform built upon authentic case analysis from the Indian Cyber Crime Coordination Centre (I4C) Cyber Digest.
+              A comprehensive citizen-centric Cyber Threat Intelligence and Digital Ethics Platform built upon authentic case analysis from the Indian Cyber Crime Coordination Centre (I4C) Cyber Digest.
             </p>
             <div className="pt-2 text-[11px] text-slate-400 font-mono space-y-1">
-              <div>Course: MDC5011C • Semester 7 (iMSc IT)</div>
-              <div>Silver Oak College of Computer Application</div>
-              <div className="pt-1 text-slate-300">
-                Author: <strong className="text-cyan-400">Sujal Shrivastav</strong>
+              <div className="text-slate-300">
+                Lead Researcher: <strong className="text-cyan-400">Sujal Shrivastav</strong>
               </div>
               <div className="flex items-center space-x-1 text-slate-400">
                 <Github className="w-3 h-3 text-slate-400" />
@@ -132,10 +130,10 @@ export default function Footer({ setActiveTab }) {
           </div>
         </div>
 
-        {/* Academic & Legal Disclaimer */}
+        {/* Platform Attribution & Copyright */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            Academic Project by <strong className="text-slate-300">Sujal Shrivastav</strong> • Silver Oak University • Integrated M.Sc. IT (Sem 7) • Course: MDC5011C
+            CyberPrahari • Engineered & Maintained by <strong className="text-slate-300">Sujal Shrivastav</strong> • National Citizen Defense & Threat Intelligence Platform
           </div>
           <div className="flex items-center space-x-4">
             <a 
@@ -148,7 +146,7 @@ export default function Footer({ setActiveTab }) {
               <span>GitHub Repository</span>
             </a>
             <span>•</span>
-            <span className="text-slate-500">Academic Year 2026–2027</span>
+            <span className="text-slate-500">Open-Source Intelligence Initiative</span>
           </div>
         </div>
       </div>

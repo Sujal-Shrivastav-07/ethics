@@ -11,15 +11,11 @@ import {
   CheckSquare, 
   Sparkles,
   Github,
-  FileText,
-  ExternalLink,
-  Award,
-  Download
+  ExternalLink
 } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dossierOpen, setDossierOpen] = useState(false);
 
   const navItems = [
     { id: 'home', label: 'Intelligence Hub', icon: Shield },
@@ -43,8 +39,8 @@ export default function Navbar({ activeTab, setActiveTab }) {
       <header className="sticky top-0 z-50 bg-[#0a0f1d]/90 backdrop-blur-md border-b border-slate-800/80">
         {/* National Emergency Advisory Ticker */}
         <div className="bg-gradient-to-r from-red-950/80 via-slate-900 to-amber-950/80 border-b border-red-500/20 px-4 py-1.5 text-xs text-slate-300 flex items-center justify-between">
-          <div className="flex items-center space-x-2 overflow-hidden whitespace-nowrap">
-            <span className="flex h-2 w-2 relative">
+          <div className="flex items-center space-x-2 truncate">
+            <span className="flex h-2 w-2 relative shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
@@ -54,7 +50,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
             </span>
           </div>
           <div className="hidden md:flex items-center space-x-4 pl-4 shrink-0 text-xs">
-            <span className="text-slate-400">Student: <strong className="text-cyan-300 font-semibold">Sujal Shrivastav</strong> (Sem 7)</span>
+            <span className="text-slate-400">Lead Developer: <strong className="text-cyan-300 font-semibold">Sujal Shrivastav</strong></span>
             <span className="text-slate-600">•</span>
             <span className="text-slate-400">Cyber Helpline:</span>
             <a 
@@ -117,18 +113,8 @@ export default function Navbar({ activeTab, setActiveTab }) {
               })}
             </nav>
 
-            {/* Emergency 1930 Button, Academic Dossier, GitHub & Mobile Hamburger */}
+            {/* GitHub Repo Button & Emergency 1930 */}
             <div className="flex items-center space-x-2.5">
-              {/* Academic Dossier Button */}
-              <button
-                onClick={() => setDossierOpen(true)}
-                className="hidden lg:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-cyan-950/70 text-cyan-300 border border-cyan-700/50 hover:bg-cyan-900/60 hover:border-cyan-500 transition-all shadow-sm"
-                title="View Academic Deliverables, Report & Assignment-2"
-              >
-                <FileText className="w-3.5 h-3.5" />
-                <span>Academic Dossier</span>
-              </button>
-
               {/* GitHub Repo Button */}
               <a
                 href="https://github.com/Sujal-Shrivastav-07/ethics"
@@ -209,111 +195,6 @@ export default function Navbar({ activeTab, setActiveTab }) {
           </div>
         )}
       </header>
-
-      {/* Academic Dossier Modal */}
-      {dossierOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-in fade-in duration-200">
-          <div className="bg-[#0f172a] border border-cyan-500/40 rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-5 text-slate-200 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-start justify-between border-b border-slate-800 pb-4">
-              <div>
-                <div className="flex items-center space-x-2">
-                  <Award className="w-5 h-5 text-cyan-400" />
-                  <h3 className="text-lg font-bold text-white">Course MDC5011C Academic Dossier</h3>
-                </div>
-                <p className="text-xs text-slate-400 mt-1">
-                  Silver Oak University • Silver Oak College of Computer Application • Semester 7 (iMSc IT)
-                </p>
-                <p className="text-xs text-cyan-400 font-mono mt-0.5">
-                  Student: <strong>Sujal Shrivastav</strong> | GitHub: 
-                  <a href="https://github.com/Sujal-Shrivastav-07" target="_blank" rel="noopener noreferrer" className="underline ml-1">
-                    @Sujal-Shrivastav-07
-                  </a>
-                </p>
-              </div>
-              <button 
-                onClick={() => setDossierOpen(false)}
-                className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Assignment 1 Section */}
-            <div className="space-y-3">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-cyan-400 font-bold flex items-center space-x-2">
-                <span>Assignment - 1: Innovative Assignment (CyberPrahari)</span>
-                <span className="text-[10px] px-2 py-0.5 rounded bg-cyan-950 border border-cyan-800 text-cyan-300">100 Marks</span>
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <div className="font-semibold text-white">📄 Formal Project Report (10–15 Pages)</div>
-                  <p className="text-slate-400 text-[11px]">A4, Times New Roman 12pt, 1.5 line spacing with IEEE citations.</p>
-                  <div className="pt-1 text-[11px] text-cyan-400 font-mono">docs/PROJECT_REPORT_PRINTABLE.html</div>
-                </div>
-                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <div className="font-semibold text-white">📊 Seminar Presentation (12 Slides)</div>
-                  <p className="text-slate-400 text-[11px]">Comprehensive presentation with presenter notes & defense Q&A.</p>
-                  <div className="pt-1 text-[11px] text-cyan-400 font-mono">docs/SEMINAR_PRESENTATION_SLIDES.md</div>
-                </div>
-                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <div className="font-semibold text-white">🎨 Citizen Awareness Infographic</div>
-                  <p className="text-slate-400 text-[11px]">High-resolution printable handbook & 5 Golden Rules poster.</p>
-                  <div className="pt-1 text-[11px] text-cyan-400 font-mono">docs/AWARENESS_INFOGRAPHIC.html</div>
-                </div>
-                <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                  <div className="font-semibold text-white">🎙️ Faculty Viva & Demo Script</div>
-                  <p className="text-slate-400 text-[11px]">Step-by-step presentation script & model viva question answers.</p>
-                  <div className="pt-1 text-[11px] text-cyan-400 font-mono">docs/DEMO_SCRIPT_FACULTY.md</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Assignment 2 Section */}
-            <div className="space-y-3 pt-2 border-t border-slate-800/80">
-              <h4 className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center space-x-2">
-                <span>Assignment - 2: Handwritten Assignment Solutions</span>
-                <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800 text-emerald-300">20 Marks</span>
-              </h4>
-              <div className="p-3 rounded-xl bg-slate-900 border border-emerald-500/30 space-y-2 text-xs">
-                <div className="font-semibold text-white">✍️ Complete Master Answers (Q1 to Q5)</div>
-                <p className="text-slate-300 text-[11px]">
-                  Exhaustive reference notes covering: Q1 (Ethics & Digital Citizenship), Q2 (Cyber Laws & IT Act), Q3 (IPR & AI Copyright), Q4 (Responsible Tech & Governance), and Q5 (I4C Digital Arrest Case Analysis).
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1 font-mono text-[11px]">
-                  <span className="bg-slate-800 px-2 py-0.5 rounded text-emerald-300">docs/ASSIGNMENT_2_HANDWRITTEN_SOLUTIONS.md</span>
-                  <span className="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">docs/ASSIGNMENT_2_PRINTABLE.html</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Submission File Naming Instruction */}
-            <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs">
-              <strong>College Submission File Naming:</strong><br />
-              <code className="font-mono text-[11px]">EnrollmentNo_SujalShrivastav_InnovativeAssignment.pdf</code>
-            </div>
-
-            <div className="flex items-center justify-between pt-2">
-              <a
-                href="https://github.com/Sujal-Shrivastav-07/ethics"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                <Github className="w-4 h-4" />
-                <span>Visit GitHub Repository</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-
-              <button
-                onClick={() => setDossierOpen(false)}
-                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold transition-colors"
-              >
-                Close Dossier
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

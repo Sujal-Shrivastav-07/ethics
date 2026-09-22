@@ -163,7 +163,7 @@ export default function AwarenessCampaign() {
           </div>
 
           <div className="text-[11px] text-slate-400 font-mono">
-            Portal: <span className="text-cyan-400 font-bold">cybercrime.gov.in</span> • Silver Oak University
+            Portal: <span className="text-cyan-400 font-bold">cybercrime.gov.in</span> • National Citizen Defense Initiative
           </div>
         </div>
       </div>

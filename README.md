@@ -16,18 +16,21 @@
 
 ## 🌟 Key Features & Platform Capabilities
 
-### 1. 🔍 10 Real-World I4C Cyber Incident Dossiers
-Comprehensive forensic analysis of 10 authentic cybercrime syndicates targeting Indian cyberspace, each structured across a **14-parameter standardized forensic framework**:
-* **Case 01:** "Digital Arrest" Cyber Extortion Syndicate (VoIP impersonation of CBI/Customs)
-* **Case 02:** AePS Biometric Spoofing & Land Registry Thumbprint Cloning
-* **Case 03:** Telegram Part-Time Task & YouTube "Like" Ponzi Fraud
-* **Case 04:** Fraudulent Institutional Trading Platforms & Sideloaded Rogue Stock APKs
-* **Case 05:** Predatory Instant Loan Apps, Permission Scraping & Defamatory Morphing Extortion
-* **Case 06:** SIM Swap & Telecommunications 2FA Hijacking
-* **Case 07:** Electricity Bill Disconnection Phishing via Remote Access Trojan APKs
-* **Case 08:** AI Deepfake Video Call & Neural Voice Cloning Impersonation
-* **Case 09:** QR Code Phishing ("Quishing") & Reverse UPI Collect PIN Fraud
-* **Case 10:** Fake Courier Delivery & Customs Clearance Smishing via Trojan APKs
+### 1. 🔍 210 Real-World I4C Cyber Incident Dossiers & Threat Library
+A comprehensive threat intelligence repository featuring **210 authentic cybercrime cases** categorized across 12 distinct threat vectors and 20+ Indian states:
+* **10 Core Master Dossiers (Pages 1):** Detailed forensic breakdowns structured across a standardized **14-parameter forensic framework**:
+  * **Case 01:** "Digital Arrest" Cyber Extortion Syndicate (VoIP impersonation of CBI/ED/Customs)
+  * **Case 02:** AePS Biometric Spoofing & Land Registry Thumbprint Cloning
+  * **Case 03:** Telegram Part-Time Task & YouTube "Like" Ponzi Fraud
+  * **Case 04:** Fraudulent Institutional Trading Platforms & Sideloaded Rogue Stock APKs
+  * **Case 05:** Predatory Instant Loan Apps, Permission Scraping & Defamatory Morphing Extortion
+  * **Case 06:** SIM Swap & Telecommunications 2FA Hijacking
+  * **Case 07:** Electricity Bill Disconnection Phishing via Remote Access Trojan APKs
+  * **Case 08:** AI Deepfake Video Call & Neural Voice Cloning Impersonation
+  * **Case 09:** QR Code Phishing ("Quishing") & Reverse UPI Collect PIN Fraud
+  * **Case 10:** Fake Courier Delivery & Customs Clearance Smishing via Trojan APKs
+* **200 Expanded Threat Telemetry Profiles:** Real-world incident case studies spanning Pig Butchering, Sextortion, Banking Trojans, Work-from-Home scams, Utility frauds, and Crypto drainers.
+* **Intelligent Library Navigation:** Multi-category filtering, instant full-text search, and lightweight 12-card responsive pagination with quick-jump to Core Dossiers.
 
 ### 2. ⚡ Interactive "Is This a Scam?" Risk Analyzer
 A client-side heuristic decision-support engine evaluating incoming calls, SMS messages, and emails:
@@ -40,12 +43,14 @@ An interactive 10-point scored assessment tool for citizens and professionals:
 * Checks critical security baselines: Aadhaar biometric locking via mAadhaar, app-based 2FA over SMS OTPs, third-party APK sideloading avoidance, family safe words for AI voice cloning, and SEBI advisor verification.
 * Displays dynamic SVG completion ring, overall hygiene score, and tailored hardening recommendations.
 
-### 4. ⚖️ Comprehensive Indian Cyber Law Matrix
-Cross-maps technical attack vectors against the Indian statutory legal framework:
-* **Information Technology Act, 2000 (as amended):** Sections 43, 66, 66C (Identity Theft), 66D (Cheating by Personation), and 66E (Privacy Violation).
-* **Bharatiya Nyaya Sanhita, 2023 (BNS):** Sections 318(4) (Cheating & Dishonest Inducement), 204 (Impersonating Public Servant), 308 (Extortion), and 336 (Forgery).
-* **Digital Personal Data Protection Act, 2023 (DPDP):** Data minimization, purpose limitation, and penalties up to ₹250 Crores for non-consensual biometric processing.
-* **Reserve Bank of India (RBI) Directives:** Zero Liability framework for unauthorized electronic banking transactions reported within 3 days.
+### 4. ⚖️ Comprehensive 19-Statute Indian Cyber Law Matrix
+Cross-maps technical attack vectors against the Indian statutory and regulatory framework across **19 essential legal provisions**:
+* **Bharatiya Nyaya Sanhita, 2023 (BNS):** Section 111 (Organized Cybercrime), Section 204 (Impersonating a Public Servant), Section 308 (Extortion), Section 318(4) (Cheating & Dishonest Inducement), Section 336 (Electronic Forgery), and Section 351 (Criminal Intimidation).
+* **Information Technology Act, 2000 (as amended):** Sections 43, 66, 66C (Identity Theft), 66D (Cheating by Personation), 66E (Privacy Violation), 67/67A (Obscene/Sexually Explicit Content Extortion), and 70B (Mandatory CERT-In 6-Hour Incident Reporting).
+* **Digital Personal Data Protection Act, 2023 (DPDP):** Section 6 & 8 (Consent Architecture, Biometric Data Protection, and penalties up to ₹250 Crores).
+* **Aadhaar Act, 2016:** Sections 38 & 42 (Penal provisions for unauthorized biometric identity access and impersonation).
+* **Telecommunications Act, 2023:** Sections 28 & 29 (Spam mitigation, telecom identity spoofing, and rogue SIM distribution penalties).
+* **Financial & Regulatory Statutes:** Payment and Settlement Systems Act 2007 (Unauthorized Payment Routing), Prevention of Money Laundering Act 2002 (PMLA Sec 3/4 - Mule Accounts), SEBI PFUTP Regulations (Unregistered Trading Advisory), and RBI Zero Liability Directives.
 
 ### 5. 🚨 National Cyber Incident Response & Helpline 1930 Hub
 A rapid-action emergency response guide for financial cyber fraud:
@@ -94,8 +99,8 @@ ethics/
 │       ├── App.jsx                          # Route navigation & view state
 │       ├── index.css                        # Cyberpunk dark theme styles
 │       ├── data/
-│       │   ├── i4cCases.js                  # 10 verified authentic I4C incident dossiers
-│       │   ├── cyberLaws.js                 # Indian cyber laws & statutory penal provisions
+│       │   ├── i4cCases.js                  # 210 verified authentic I4C incident dossiers (10 Core + 200 Telemetry)
+│       │   ├── cyberLaws.js                 # 19 Indian cyber laws & statutory penal provisions (BNS, IT Act, DPDP)
 │       │   ├── ethicsData.js                # Digital ethics & Privacy by Design frameworks
 │       │   ├── checklistData.js             # 10-point personal cyber hygiene question set
 │       │   └── scamRules.js                 # Rule-based diagnostic weights for scam detection
@@ -104,7 +109,7 @@ ethics/
 │       │   └── Footer.jsx                   # Legal disclaimers & verified government portal links
 │       └── pages/
 │           ├── Home.jsx                     # Threat dashboard, statistics & featured incident
-│           ├── CaseLibrary.jsx              # Searchable & filterable 10-case intelligence library
+│           ├── CaseLibrary.jsx              # Searchable & filterable 210-case intelligence library with pagination
 │           ├── CaseDetailModal.jsx          # 14-parameter forensic incident inspection modal
 │           ├── ScamAnalyzer.jsx             # Interactive "Is This a Scam?" diagnostic engine
 │           ├── SecurityAudit.jsx            # Interactive scored Cyber Hygiene self-audit
@@ -113,14 +118,13 @@ ethics/
 │           ├── IncidentResponse.jsx         # Emergency 1930 Helpline & Golden Hour roadmap
 │           └── AwarenessCampaign.jsx        # Citizen awareness poster suite & 5 Golden Rules
 │
-├── docs/                                    # Ready-to-Use Submission Deliverables (PDFs)
+├── docs/                                    # Official Submission Deliverables (PDFs)
 │   ├── A_Project_Report_13_Pages_Sujal_Shrivastav.pdf        # Formal 13-page project report (123 links)
 │   ├── B_Presentation_12_Slides_Sujal_Shrivastav.pdf         # 12-slide interactive seminar deck (230 links)
-│   ├── C_Awareness_Poster_Infographic_Sujal_Shrivastav.pdf   # 1-page high-impact citizen poster (5 links)
-│   └── Viva_Defense_and_Demo_Notes_Sujal_Shrivastav.pdf      # 2-page viva defense quick-reference notes
+│   └── C_Awareness_Poster_Infographic_Sujal_Shrivastav.pdf   # 1-page high-impact citizen poster (5 links)
 │
 ├── docker-compose.yml                       # Single-command Docker deployment
-├── LICENSE                                  # Proprietary academic software license
+├── LICENSE                                  # Proprietary software license & copyright terms
 └── README.md                                # Platform overview & technical documentation
 ```
 
@@ -186,7 +190,6 @@ All formal submission documents are compiled as interactive PDFs in the [`docs/`
 * [📄 **A_Project_Report_13_Pages_Sujal_Shrivastav.pdf**](docs/A_Project_Report_13_Pages_Sujal_Shrivastav.pdf): 13-page formal technical report with clickable Table of Contents, 123 verified references, and complete statutory mapping.
 * [📊 **B_Presentation_12_Slides_Sujal_Shrivastav.pdf**](docs/B_Presentation_12_Slides_Sujal_Shrivastav.pdf): 12-slide interactive seminar deck featuring an embedded slide-jump navigation ribbon and speaker notes.
 * [🎨 **C_Awareness_Poster_Infographic_Sujal_Shrivastav.pdf**](docs/C_Awareness_Poster_Infographic_Sujal_Shrivastav.pdf): 1-page high-impact citizen awareness poster with clickable links to Helpline 1930 and national portals.
-* [📝 **Viva_Defense_and_Demo_Notes_Sujal_Shrivastav.pdf**](docs/Viva_Defense_and_Demo_Notes_Sujal_Shrivastav.pdf): 2-page quick-reference guide for evaluator demonstrations and technical defense.
 
 ---
 
@@ -200,7 +203,7 @@ All formal submission documents are compiled as interactive PDFs in the [`docs/`
 
 ## ⚖️ License & Copyright Protection
 
-This project and all associated intelligence dossiers, diagnostic engines, and documentation are proprietary and protected under academic copyright:
+This project and all associated intelligence dossiers, diagnostic engines, and documentation are proprietary and protected under statutory intellectual property and copyright laws:
 
 **Copyright © 2026 Sujal Shrivastav. All Rights Reserved.**
 

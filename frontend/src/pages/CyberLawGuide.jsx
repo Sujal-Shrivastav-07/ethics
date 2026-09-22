@@ -43,7 +43,7 @@ export default function CyberLawGuide() {
         <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
         <div>
           <strong className="text-white block mb-0.5">Mandatory Legal Disclaimer:</strong>
-          This platform provides educational and research information for academic study (MDC5011C) and citizen awareness. It does not constitute formal legal counsel or advisory opinion. All statutory excerpts are referenced from official publications on <a href="https://www.indiacode.nic.in" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline font-mono">India Code</a>.
+          This platform provides legal threat intelligence and statutory research for public digital literacy and citizen awareness. It does not constitute formal legal counsel or advisory opinion. All statutory excerpts are referenced from official publications on <a href="https://www.indiacode.nic.in" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline font-mono">India Code</a>.
         </div>
       </div>
 
