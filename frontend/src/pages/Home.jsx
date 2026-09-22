@@ -13,7 +13,12 @@ import {
   TrendingUp, 
   FileText,
   ShieldCheck,
-  ChevronRight
+  ChevronRight,
+  GraduationCap,
+  ExternalLink,
+  Github,
+  Award,
+  Sparkles
 } from 'lucide-react';
 import { I4C_CASES } from '../data/i4cCases';
 
@@ -47,6 +52,21 @@ export default function Home({ setActiveTab, setSelectedCase }) {
             Synthesizing technical attack flows, Indian statutory frameworks, digital ethics, and proactive citizen defense.
           </p>
 
+          {/* Student attribution */}
+          <div className="flex items-center justify-center space-x-2 text-xs text-slate-400">
+            <span>Developed by <strong className="text-cyan-400">Sujal Shrivastav</strong> (Sem 7, iMSc IT)</span>
+            <span>•</span>
+            <a 
+              href="https://github.com/Sujal-Shrivastav-07/ethics" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center space-x-1 text-slate-300 hover:text-white underline"
+            >
+              <Github className="w-3.5 h-3.5 text-cyan-400" />
+              <span>GitHub Repo</span>
+            </a>
+          </div>
+
           {/* Call to Actions */}
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
@@ -54,7 +74,7 @@ export default function Home({ setActiveTab, setSelectedCase }) {
               className="flex items-center space-x-2 px-5 py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold text-sm hover:bg-cyan-400 shadow-lg shadow-cyan-500/25 transition-all"
             >
               <BookOpen className="w-4 h-4" />
-              <span>Explore 8 I4C Cases</span>
+              <span>Explore 10 I4C Cases</span>
             </button>
             <button
               onClick={() => setActiveTab('scam-detector')}
@@ -82,7 +102,7 @@ export default function Home({ setActiveTab, setSelectedCase }) {
               <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider">Research Dataset</span>
               <BookOpen className="w-4 h-4 text-cyan-400" />
             </div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-white mt-2">8 Cases</div>
+            <div className="text-2xl sm:text-3xl font-extrabold text-white mt-2">10 Cases</div>
             <p className="text-xs text-slate-400 mt-1">Verified I4C Cyber Digest Incidents</p>
           </div>
 
@@ -170,6 +190,178 @@ export default function Home({ setActiveTab, setSelectedCase }) {
         </div>
       </section>
 
+      {/* University Academic Deliverables & Course Dossier */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="cyber-card rounded-2xl p-6 sm:p-8 border border-cyan-500/30 bg-gradient-to-br from-slate-900 via-[#0c1425] to-slate-900">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+              <div className="flex items-center space-x-2 text-cyan-400 font-mono text-xs uppercase tracking-wider mb-1">
+                <Award className="w-4 h-4" />
+                <span>Silver Oak University • Course Code: MDC5011C (Sem 7)</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold text-white">
+                Official Academic Deliverables & Submission Dossier
+              </h2>
+              <p className="text-xs text-slate-400 mt-1">
+                Author: <strong className="text-slate-200">Sujal Shrivastav</strong> • Integrated M.Sc. IT • All syllabus requirements covered
+              </p>
+            </div>
+            <a
+              href="https://github.com/Sujal-Shrivastav-07/ethics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs border border-slate-700 transition-colors shrink-0"
+            >
+              <Github className="w-4 h-4 text-cyan-400" />
+              <span>github.com/Sujal-Shrivastav-07/ethics</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
+            {/* Box 1: Assignment 1 */}
+            <div className="p-5 rounded-xl bg-slate-950/80 border border-slate-800/80 space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400">
+                  Assignment - 1: Innovative Assignment
+                </span>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">
+                  100 Marks Rubric
+                </span>
+              </div>
+              <ul className="space-y-2.5 text-xs text-slate-300">
+                <li className="flex items-start space-x-2">
+                  <span className="text-cyan-400 font-bold">•</span>
+                  <div>
+                    <strong>Project Report (10–15 Pages):</strong> Formatted strictly to A4, Times New Roman 12pt, 1.5 line spacing with IEEE citations.
+                    <div className="text-[11px] text-slate-500 font-mono">docs/PROJECT_REPORT_PRINTABLE.html</div>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-cyan-400 font-bold">•</span>
+                  <div>
+                    <strong>Seminar Presentation (12 Slides):</strong> 12-slide defense deck with speaker notes and anticipated viva Q&A.
+                    <div className="text-[11px] text-slate-500 font-mono">docs/SEMINAR_PRESENTATION_SLIDES.md</div>
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-cyan-400 font-bold">•</span>
+                  <div>
+                    <strong>Interactive Prototype & Awareness Suite:</strong> Live React application + 5 Golden Rules Infographic poster.
+                  </div>
+                </li>
+              </ul>
+              <div className="pt-2 text-[11px] text-amber-300/90 font-mono bg-amber-500/10 p-2 rounded border border-amber-500/20">
+                Save PDF as: EnrollmentNo_SujalShrivastav_InnovativeAssignment.pdf
+              </div>
+            </div>
+
+            {/* Box 2: Assignment 2 */}
+            <div className="p-5 rounded-xl bg-slate-950/80 border border-emerald-500/30 space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">
+                  Assignment - 2: Handwritten Assignment
+                </span>
+                <span className="text-[11px] px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">
+                  20 Marks Rubric
+                </span>
+              </div>
+              <ul className="space-y-2.5 text-xs text-slate-300">
+                <li className="flex items-start space-x-2">
+                  <span className="text-emerald-400 font-bold">•</span>
+                  <div>
+                    <strong>Q1 (20M):</strong> Ethics & Digital Citizenship (Footprint, cyberbullying, netiquette).
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-emerald-400 font-bold">•</span>
+                  <div>
+                    <strong>Q2 (20M):</strong> Cyber Laws & Data Privacy (IT Act 2000, BNS 2023, DPDP Act 2023).
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-emerald-400 font-bold">•</span>
+                  <div>
+                    <strong>Q3 (20M):</strong> Intellectual Property Rights (Copyright, patents, software piracy, AI ethics).
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-emerald-400 font-bold">•</span>
+                  <div>
+                    <strong>Q4 (20M):</strong> Responsible Tech & Governance (CIA triad, AUP/BYOD policies, green computing).
+                  </div>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <span className="text-emerald-400 font-bold">•</span>
+                  <div>
+                    <strong>Q5 (20M):</strong> I4C Cyber Digest Incident Analysis ("Digital Arrest" syndicate full breakdown).
+                  </div>
+                </li>
+              </ul>
+              <div className="pt-2 text-[11px] text-emerald-300 font-mono bg-emerald-500/10 p-2 rounded border border-emerald-500/20">
+                Study Guide: docs/ASSIGNMENT_2_HANDWRITTEN_SOLUTIONS.md
+              </div>
+            </div>
+          </div>
+
+          {/* Box 3: 10 Official Syllabus Titles from PDF */}
+          <div className="mt-6 p-5 rounded-xl bg-slate-950/80 border border-amber-500/30 space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
+                Official Syllabus Title Coverage (10 / 10 Mapped)
+              </span>
+              <span className="text-[11px] px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800 font-mono">
+                Page 1 Guidelines Compliance
+              </span>
+            </div>
+            <p className="text-xs text-slate-300">
+              CyberPrahari systematically addresses and synthesizes all 10 suitable project titles recommended by Silver Oak University:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs text-slate-300 pt-1">
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">1.</span>
+                <span>I4C Cyber Digest-Based Cybercrime Analysis and Digital Ethics Portfolio</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">2.</span>
+                <span>Cyber Threat Investigation using I4C Cyber Digest</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">3.</span>
+                <span>Real-World Cybercrime Analysis using I4C Cyber Digest Reports</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">4.</span>
+                <span>Digital Ethics, Cyber Laws, and Cyber Threat Intelligence: An I4C Cyber Digest Portfolio</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">5.</span>
+                <span>Cybercrime Case Analysis and Responsible Technology Solutions using I4C Cyber Digest</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">6.</span>
+                <span>Cyber Threat Intelligence Report: Analysis of Recent Cyber Incidents from I4C Cyber Digest</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">7.</span>
+                <span>Emerging Cyber Threats and Digital Governance: An I4C Cyber Digest Study</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">8.</span>
+                <span>Cybersecurity Awareness and Legal Analysis through I4C Cyber Digest</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">9.</span>
+                <span>Contemporary Cyber Threat Analysis using I4C Daily Cyber Digest</span>
+              </div>
+              <div className="flex items-start space-x-2 bg-slate-900/60 p-2 rounded border border-slate-800/80">
+                <span className="text-amber-400 font-bold font-mono shrink-0">10.</span>
+                <span>I4C Cyber Digest Innovation Portfolio: Cyber Ethics, Cyber Laws, and Responsible Digital Practices</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Cross-Case Threat Lifecycle & Research Framework */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
@@ -178,7 +370,7 @@ export default function Home({ setActiveTab, setSelectedCase }) {
             The Cybercrime Lifecycle Across Analyzed I4C Cases
           </h2>
           <p className="text-slate-400 text-sm">
-            Analysis of 8 authentic incidents reveals a repeatable 5-stage attack chain combining social engineering, technical exploitation, and regulatory bypass.
+            Analysis of 10 authentic incidents reveals a repeatable 5-stage attack chain combining social engineering, technical exploitation, and regulatory bypass.
           </p>
         </div>
 

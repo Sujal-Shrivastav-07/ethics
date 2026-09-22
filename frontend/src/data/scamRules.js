@@ -58,5 +58,19 @@ export const SCAM_INDICATORS = [
     description: "Bank or electricity disconnection notices arriving from personal mobile numbers (+91-98xxxxxx) instead of official alpha headers (e.g., VM-HDFCBK, VK-BESCOM).",
     weight: 20,
     tag: "Spoofed Communications"
+  },
+  {
+    id: "qr_code_receive",
+    label: "Sent a QR Code Claiming 'Scan this QR to Receive Payment or Prize'",
+    description: "Buyer on OLX/Marketplace or caller claims scanning their QR code will credit money to your UPI account, but the prompt asks for your secret UPI PIN.",
+    weight: 35,
+    tag: "Reverse UPI Quishing"
+  },
+  {
+    id: "courier_parcel_sms",
+    label: "SMS Claiming Failed Parcel Delivery with Urgent Link / Reschedule Fee",
+    description: "SMS stating India Post or courier cannot deliver package due to address error, demanding immediate payment of ₹5–₹10 or downloading an APK tracker.",
+    weight: 25,
+    tag: "Delivery Smishing"
   }
 ];

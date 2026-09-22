@@ -1,12 +1,12 @@
 import React from 'react';
-import { Shield, ExternalLink, Heart, AlertCircle } from 'lucide-react';
+import { Shield, ExternalLink, AlertCircle, Github, FileText } from 'lucide-react';
 
 export default function Footer({ setActiveTab }) {
   return (
     <footer className="bg-[#070b14] border-t border-slate-800/80 pt-12 pb-8 text-slate-400 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800/60">
-          {/* Col 1: Project Identity */}
+          {/* Col 1: Project Identity & Author */}
           <div className="space-y-3 md:col-span-1">
             <div className="flex items-center space-x-2">
               <Shield className="w-5 h-5 text-cyan-400" />
@@ -15,9 +15,24 @@ export default function Footer({ setActiveTab }) {
             <p className="text-slate-400 text-xs leading-relaxed">
               An academic and citizen-centric Cyber Threat Intelligence and Digital Ethics Platform built upon authentic case analysis from the Indian Cyber Crime Coordination Centre (I4C) Cyber Digest.
             </p>
-            <div className="pt-2 text-[11px] text-slate-500 font-mono">
-              Course Code: MDC5011C • Sem 7<br />
-              Silver Oak College of Computer Application
+            <div className="pt-2 text-[11px] text-slate-400 font-mono space-y-1">
+              <div>Course: MDC5011C • Semester 7 (iMSc IT)</div>
+              <div>Silver Oak College of Computer Application</div>
+              <div className="pt-1 text-slate-300">
+                Author: <strong className="text-cyan-400">Sujal Shrivastav</strong>
+              </div>
+              <div className="flex items-center space-x-1 text-slate-400">
+                <Github className="w-3 h-3 text-slate-400" />
+                <span>GitHub:</span>
+                <a 
+                  href="https://github.com/Sujal-Shrivastav-07" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-cyan-400 hover:text-cyan-300 underline"
+                >
+                  @Sujal-Shrivastav-07
+                </a>
+              </div>
             </div>
           </div>
 
@@ -27,7 +42,7 @@ export default function Footer({ setActiveTab }) {
             <ul className="space-y-2">
               <li>
                 <button onClick={() => { setActiveTab('cases'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-cyan-400 transition-colors">
-                  I4C Case Intelligence Library (8 Cases)
+                  I4C Case Intelligence Library (10 Cases)
                 </button>
               </li>
               <li>
@@ -48,6 +63,11 @@ export default function Footer({ setActiveTab }) {
               <li>
                 <button onClick={() => { setActiveTab('digital-ethics'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-cyan-400 transition-colors">
                   Digital Ethics & Governance Framework
+                </button>
+              </li>
+              <li>
+                <button onClick={() => { setActiveTab('awareness'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="hover:text-cyan-400 transition-colors">
+                  Citizen Awareness Infographics
                 </button>
               </li>
             </ul>
@@ -115,10 +135,20 @@ export default function Footer({ setActiveTab }) {
         {/* Academic & Legal Disclaimer */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            Academic Project • Silver Oak University • Integrated M.Sc. IT (Sem 7) • Course: MDC5011C
+            Academic Project by <strong className="text-slate-300">Sujal Shrivastav</strong> • Silver Oak University • Integrated M.Sc. IT (Sem 7) • Course: MDC5011C
           </div>
-          <div className="text-center md:text-right max-w-xl">
-            <strong>Disclaimer:</strong> This application is built strictly for academic analysis, threat intelligence demonstration, and public cyber awareness. It does not constitute legal counsel or official police authority.
+          <div className="flex items-center space-x-4">
+            <a 
+              href="https://github.com/Sujal-Shrivastav-07/ethics" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              <Github className="w-3.5 h-3.5" />
+              <span>GitHub Repository</span>
+            </a>
+            <span>•</span>
+            <span className="text-slate-500">Academic Year 2026–2027</span>
           </div>
         </div>
       </div>

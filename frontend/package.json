@@ -2,6 +2,13 @@
   "name": "cyberprahari-portal",
   "private": true,
   "version": "1.0.0",
+  "description": "National Cyber Threat Intelligence & Digital Ethics Platform by Sujal Shrivastav",
+  "author": "Sujal Shrivastav <https://github.com/Sujal-Shrivastav-07>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sujal-Shrivastav-07/ethics.git"
+  },
+  "license": "UNLICENSED",
   "type": "module",
   "scripts": {
     "dev": "vite",

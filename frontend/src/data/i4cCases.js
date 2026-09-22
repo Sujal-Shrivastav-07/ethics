@@ -404,6 +404,106 @@ export const I4C_CASES = [
       "In the generative AI era, audiovisual evidence is no longer proof of physical reality.",
       "Emergency financial requests made via digital channels must always be verified through an independent callback on a trusted traditional cellular line."
     ]
+  },
+  {
+    id: "case-09",
+    caseNumber: 9,
+    title: "QR Code Phishing ('Quishing') & Reverse UPI Payment Fraud Syndicate",
+    date: "January 2024 – Continuous (I4C & NPCI Advisory)",
+    source: "I4C Cyber Digest / NPCI Public Security Advisory Series",
+    target: "Online marketplace sellers (OLX, Quikr, Facebook Marketplace), small retail shopkeepers, and students receiving fake cashback/scholarship claims",
+    category: "Financial Fraud & Social Engineering",
+    threatLevel: "High",
+    severityScore: 8.7,
+    attackMethod: "Deceptive dynamic QR code generation disguised as 'Scan to Receive Payment / Claim Prize'; systematically inverting transaction semantics to trick the victim into entering their UPI PIN, which triggers immediate account debit.",
+    cybercrimeType: "Reverse Payment Fraud, QR Code Phishing (Quishing), Cheating by Personation, and Financial Cyber Fraud",
+    attackFlow: [
+      { step: 1, actor: "Threat Actor", action: "Posing as an eager buyer on OLX/marketplace, agrees to purchase an item without bargaining and insists on paying immediately via UPI." },
+      { step: 2, actor: "Deceptive Lure", action: "Sends a screenshot of a dynamic QR code stating: 'Scan this official QR code to receive ₹15,000 into your linked bank account instantly'." },
+      { step: 3, actor: "Semantic Confusion", action: "When the victim scans using Google Pay/PhonePe, the app interface prompts: 'Enter UPI PIN to Authorize'. Attacker falsely claims: 'Entering PIN is required by NPCI to credit your account'." },
+      { step: 4, actor: "Instant Debit", action: "The moment the victim inputs their UPI PIN, the funds (₹15,000) are debited from their account instead of credited." },
+      { step: 5, actor: "Second Exploit & Exit", action: "Attacker claims a 'system glitch', sends another QR code for ₹30,000 to 'reverse the transaction', drains more funds, and blocks the victim." }
+    ],
+    impact: "Rapid direct financial loss (₹10,000 to ₹2,50,000 per victim), psychological confusion, and diminished trust in unified digital payment infrastructure across small merchants and peer-to-peer sellers.",
+    ethicalIssues: [
+      "Malicious manipulation of interface semantics and terminology ('Pay' vs 'Receive').",
+      "Exploitation of digital literacy gaps among new UPI users and small business owners.",
+      "Cynical weaponization of open public marketplaces designed for citizen commerce."
+    ],
+    legalProvisions: [
+      { statute: "IT Act, 2000 - Section 66D", description: "Punishment for cheating by personation by using computer resource and digital payment interfaces." },
+      { statute: "IT Act, 2000 - Section 43 & 66", description: "Unauthorized access and fraudulent inducement of electronic fund transfers." },
+      { statute: "Bharatiya Nyaya Sanhita, 2023 - Section 318(4)", description: "Cheating and dishonestly inducing delivery of movable property (replaces IPC 420)." },
+      { statute: "Payment and Settlement Systems Act, 2007", description: "Violation of authorized payment system operating guidelines and customer safeguards." }
+    ],
+    weaknesses: {
+      human: "Fundamental misunderstanding of UPI architecture—citizens failing to realize that receiving money NEVER requires entering a UPI PIN.",
+      technical: "Payment applications historically displayed ambiguous confirmation dialogs that did not sufficiently highlight the difference between 'Collect Request' debits and incoming credits."
+    },
+    prevention: [
+      "Golden Rule of UPI: You NEVER enter a UPI PIN to RECEIVE money. A UPI PIN is strictly and exclusively used to DEBIT (send) funds from your account.",
+      "Reject QR Codes for Receiving Money: Do not scan any QR code sent to you over chat to receive payment. To receive funds, merely sharing your UPI ID or mobile number is sufficient.",
+      "Beware of Remote Buyers Over-Eager to Pay: Never deal with buyers who refuse to meet in person and immediately send QR codes or payment links."
+    ],
+    recommendations: [
+      "UPI payment applications (NPCI, PhonePe, GPay, Paytm) must display full-screen, high-contrast warning alerts whenever a user scans a merchant QR code that triggers a debit while in an active chat session.",
+      "Classified platforms (OLX, Quikr) should implement in-app payment escrow systems and restrict direct off-platform QR code sharing."
+    ],
+    keyLearnings: [
+      "UPI PIN is an authentication secret for outflowing transactions only.",
+      "Social engineers exploit the cognitive rush of receiving money to blind victims to the wording on transaction authorization screens."
+    ]
+  },
+  {
+    id: "case-10",
+    caseNumber: 10,
+    title: "Fake Courier Delivery & Customs Clearance Smishing via Trojan APKs",
+    date: "April 2024 – Continuous (I4C Nationwide High Priority Alert)",
+    source: "I4C Cyber Digest Bulletin / India Post & CERT-In Smishing Advisory",
+    target: "E-commerce shoppers, festive season online consumers, citizens awaiting postal/consignment deliveries",
+    category: "Malware & Remote Access Trojan",
+    threatLevel: "High",
+    severityScore: 9.0,
+    attackMethod: "SMS smishing lure claiming an urgent postal package cannot be delivered due to an address mismatch; directs victim to click a phishing URL that downloads a malicious APK Trojan disguised as a courier tracking tool, exfiltrating SMS OTPs and banking credentials.",
+    cybercrimeType: "Smishing, Malware Distribution, Banking Credential Exfiltration, and Remote Access Trojan (RAT)",
+    attackFlow: [
+      { step: 1, actor: "Smishing Gateway", action: "Broadcasts mass SMS lures from unverified numbers: 'IndiaPost: Your package IN982713 arrived at warehouse but cannot be delivered due to incomplete address. Update within 12 hours: http://indiapost-update[.]top'." },
+      { step: 2, actor: "Phishing Redirect", action: "Clicking the link opens a spoofed website mimicking India Post, Blue Dart, or DTDC, prompting the victim to pay a token ₹5 or ₹10 redelivery fee." },
+      { step: 3, actor: "Malicious Sideloading", action: "Site prompts the user to download an 'Official Postal Tracking Utility' (`IndiaPost_Tracking.apk` or `SpeedPost_v2.apk`) to complete the address verification." },
+      { step: 4, actor: "Permission Hijack", action: "Upon installation, the Trojan requests accessibility permissions, reads incoming SMS messages, and mirrors keystrokes." },
+      { step: 5, actor: "Credential Theft & Exfiltration", action: "When the victim enters credit card / net banking credentials for the token ₹10 fee, the Trojan intercepts the incoming bank OTP, performs high-value unauthorized debits, and suppresses notification SMS." }
+    ],
+    impact: "Uncontrolled financial drain from bank accounts (₹50,000 to ₹10 Lakhs), unauthorized remote control of mobile devices, silent interception of sensitive two-factor authentication tokens.",
+    ethicalIssues: [
+      "Weaponization of citizen expectations of public postal infrastructure (India Post) and consumer trust in essential delivery logistics.",
+      "Deceptive abuse of Android accessibility services designed to assist disabled individuals.",
+      "Covert data exfiltration and silent suppression of security notifications without user knowledge."
+    ],
+    legalProvisions: [
+      { statute: "IT Act, 2000 - Section 43 & 66", description: "Hacking, introducing computer contaminant/Trojan, and unauthorized data extraction." },
+      { statute: "IT Act, 2000 - Section 66C", description: "Identity theft through electronic interception of passwords and one-time authentication tokens." },
+      { statute: "IT Act, 2000 - Section 66D", description: "Cheating by personation by simulating official postal and logistics websites." },
+      { statute: "Bharatiya Nyaya Sanhita, 2023 - Section 318(4)", description: "Cheating and dishonestly inducing property transfer via digital fraud." },
+      { statute: "Bharatiya Nyaya Sanhita, 2023 - Section 336", description: "Forgery of electronic records and simulating official government emblems." }
+    ],
+    weaknesses: {
+      human: "Urgency over missing a parcel; cognitive compliance with paying a negligible fee (₹5–₹10); habitual granting of Android application permissions without scrutiny.",
+      technical: "Ability to sideload unverified third-party APK packages from mobile web browsers; mobile operating systems allowing background SMS reading when accessibility services are granted."
+    },
+    prevention: [
+      "Official Post & Courier Policy: India Post and legitimate logistics firms (Blue Dart, Delhivery) NEVER send tracking links via personal 10-digit mobile numbers (+91-9xxxxxx).",
+      "Inspect URL Domains: Authentic government domains strictly end with `.gov.in` (e.g., `indiapost.gov.in`), never `.top`, `.vip`, `.xyz`, or `.online`.",
+      "Zero APK Sideloading: Never download or install `.apk` files received via SMS, WhatsApp, or third-party websites. Legitimate courier tracking never requires installing an APK outside Google Play Store.",
+      "Check Android Permissions: Never grant 'Accessibility Services' or 'Notification Access' permissions to utility or courier tracking applications."
+    ],
+    recommendations: [
+      "Telecom providers must enforce strict SMS firewall filtering on alphanumeric sender IDs (headers) and automatically block SMS containing suspicious external `.apk` download links.",
+      "Mobile operating system vendors (Android) should mandate strict sandboxing preventing accessibility services from accessing one-time password (OTP) input fields and notification streams."
+    ],
+    keyLearnings: [
+      "Smishing attacks leverage low-value fees (₹5 or ₹10) as psychological bait to capture high-value banking credentials and device permissions.",
+      "Logistics updates should always be verified independently by visiting official web portals directly using the consignment tracking number."
+    ]
   }
 ];
 
