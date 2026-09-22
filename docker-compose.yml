@@ -1,0 +1,12 @@
+services:
+  cyberprahari-platform:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: cyberprahari-platform
+    ports:
+      - "5173:80"
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
